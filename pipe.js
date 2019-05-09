@@ -15,3 +15,5 @@ function pipe(){
   fn.args = args
   return fn
 }
+
+module.exports = pipe
