@@ -1,6 +1,7 @@
 function pipe(){
   var args = [].splice.call(arguments, 0)
   var fn = function(callback){
+    if(!callback) return fn.value
     args = args.concat([].splice.call(arguments, 1))
     var value = callback.apply(fn.value, args)
     fn.value = value
